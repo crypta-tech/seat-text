@@ -19,6 +19,6 @@ class Page extends Model
      */
     public function getLinkAttribute(): string
     {
-        return route('text.public', $this->url);
+        return route('cryptatext::text.public', $this->url);
     }
 }

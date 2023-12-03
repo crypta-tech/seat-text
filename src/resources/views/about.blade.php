@@ -2,7 +2,7 @@
 
 @section('title', trans('text::text.text'))
 @section('page_header', trans('text::text.text'))
-@section('page_description', trans('text::text.about'))
+@section('page_description', trans('text::cryptatext::text.about'))
 
 
 @push('head')

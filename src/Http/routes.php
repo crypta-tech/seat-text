@@ -7,37 +7,37 @@ Route::group([
 ], function () {
     
     Route::get('/list', [
-        'as'   => 'text.list',
+        'as'   => 'cryptatext::text.list',
         'uses' => 'TextController@getConfigureView',
         'middleware' => 'can:text.edit'
     ]);
 
     Route::get('/gettextbyid/{id}', [
-        'as'   => 'text.textbyid',
+        'as'   => 'cryptatext::text.textbyid',
         'uses' => 'TextController@getTextByID',
         'middleware' => 'can:text.edit'
     ]);
 
     Route::post('/postpagenew', [
-        'as'   => 'text.createText',
+        'as'   => 'cryptatext::text.createText',
         'uses' => 'TextController@postNewPage',
         'middleware' => 'can:text.edit'
     ]);
 
     Route::get('/deltextbyid/{id}', [
-        'as'   => 'text.deletePage',
+        'as'   => 'cryptatext::text.deletePage',
         'uses' => 'TextController@deletePageById',
         'middleware' => 'can:text.edit'
     ]);
 
     Route::get('/about', [
-        'as'   => 'text.about',
+        'as'   => 'cryptatext::text.about',
         'uses' => 'TextController@getAboutView',
         'middleware' => 'can:text.edit'
     ]);
 
     Route::get('/instructions', [
-        'as'   => 'text.instructions',
+        'as'   => 'cryptatext::text.instructions',
         'uses' => 'TextController@getInstructionsView',
         'middleware' => 'can:text.edit'
     ]);
@@ -50,7 +50,7 @@ Route::group([
     'prefix' => 'public'
 ], function () {
     Route::get('/{url}', [
-        'as'   => 'text.public',
+        'as'   => 'cryptatext::text.public',
         'uses' => 'TextController@getPublicText'
     ]);
 });

@@ -14,19 +14,19 @@ return [
 			[
 				'name' => 'Configure',
 				'icon' => 'fas fa-cogs',
-				'route' => 'text.list',
+				'route' => 'cryptatext::text.list',
 				'permission' => 'text.edit',
 			],
 			[
                 'name' => 'Instructions',
                 'icon' => 'fas fa-book-open',
-                'route' => 'text.instructions',
+                'route' => 'cryptatext::text.instructions',
                 'permission' => 'text.edit',
 			],
 			[
                 'name' => 'About',
                 'icon' => 'fas fa-info',
-                'route' => 'text.about',
+                'route' => 'cryptatext::text.about',
                 'permission' => 'text.edit',
             ],
 		],

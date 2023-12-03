@@ -2,7 +2,7 @@
 
 @section('title', trans('text::text.text'))
 @section('page_header', trans('text::text.text'))
-@section('page_description', trans('text::text.instructions'))
+@section('page_description', trans('text::cryptatext::text.instructions'))
 
 @push('head')
 <link rel = "stylesheet"
@@ -58,7 +58,7 @@
         </div>
       </div>
       <div class="card-footer text-muted">
-        Plugin maintained by <a href="{{ route('text.about') }}"> {!! img('characters', 'portrait', 96057938, 64, ['class' => 'img-circle eve-icon small-icon']) !!} Crypta Electrica</a>. <span class="float-right snoopy" style="color: #fa3333;"><i class="fas fa-signal"></i></span>
+        Plugin maintained by <a href="{{ route('cryptatext::text.about') }}"> {!! img('characters', 'portrait', 96057938, 64, ['class' => 'img-circle eve-icon small-icon']) !!} Crypta Electrica</a>. <span class="float-right snoopy" style="color: #fa3333;"><i class="fas fa-signal"></i></span>
       </div>
     </div>
   </div>

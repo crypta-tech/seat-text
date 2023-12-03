@@ -45,11 +45,11 @@ class TextController extends Controller
 
             $page->save();
     
-            return redirect()->route('text.list')->with('success', 'Created / Updated Text');
+            return redirect()->route('cryptatext::text.list')->with('success', 'Created / Updated Text');
         }
         catch (QueryException $e)
         {
-            return redirect()->route('text.list')->with('error', 'Error creating text: '. $e->getMessage());
+            return redirect()->route('cryptatext::text.list')->with('error', 'Error creating text: '. $e->getMessage());
         }
         
     }
@@ -58,7 +58,7 @@ class TextController extends Controller
     {
         Page::destroy($id);
 
-        return redirect()->route('text.list')->with('success', 'Deleted Text');
+        return redirect()->route('cryptatext::text.list')->with('success', 'Deleted Text');
     }
 
     public function getAboutView()
